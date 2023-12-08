@@ -1,7 +1,9 @@
 import re
 
+# reading the puzzle file
 puzzle = open('../assets/day1puzzle.txt')
 lines = puzzle.readlines()
+# initialising lists
 result_1 = []
 result_2 = []
 
@@ -11,6 +13,7 @@ def reverse(text):
     return text[::-1]
 
 
+# converts text based numbers to integers
 def text2int(text):
     match text:
         case 'one':
@@ -57,4 +60,5 @@ for line in lines:
     # appends result list by combining numbers as string then casting to int
     result_2.append(int(str(x) + str(y)))
 
+# sums the result list
 print(sum(result_2))
